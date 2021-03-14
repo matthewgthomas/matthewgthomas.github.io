@@ -1,0 +1,42 @@
+body {
+    background: #000000;
+    color: #eaeaea;
+    font-family: 'Cormorant Unicase', serif;
+}
+h1 {
+	font-size: 6.5vw;
+	margin-top: 0px;
+}
+a {
+    color: #eaeaea;
+    text-decoration: underline dashed #05853a;
+    /*border-bottom: 3px solid green;*/
+}
+a:hover {
+    color: #05853a;
+}
+span {
+    font-size: 5vw;
+}
+p {
+    font-size: 4vw;
+    margin-right: 50px;
+}
+.fa,
+.fas,
+.fab {
+    font-size: 6.5vw;
+    color: #eaeaea;
+}
+.fa:hover,
+.fas:hover,
+.fab:hover {
+    color: #05853a;
+}
+.pos {
+    margin-left: 75px;
+    margin-top: 60px;
+}
+.my-a:hover .fas {
+    color: #05853a;
+}
