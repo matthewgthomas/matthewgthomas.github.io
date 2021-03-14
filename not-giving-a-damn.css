@@ -11,6 +11,16 @@ h2 {
 	font-size: 5vw;
 	margin-top: 0px;
 }
+span {
+    font-size: 5vw;
+}
+p {
+    font-size: 4vw;
+    margin-right: 50px;
+}
+p.article {
+    font-size: 3vw;
+}
 a {
     color: #eaeaea;
     text-decoration: underline dashed #05853a;
@@ -19,12 +29,8 @@ a {
 a:hover {
     color: #05853a;
 }
-span {
-    font-size: 5vw;
-}
-p {
-    font-size: 4vw;
-    margin-right: 50px;
+.my-a:hover .fas {
+    color: #05853a;
 }
 .fa,
 .fas,
@@ -41,6 +47,16 @@ p {
     margin-left: 75px;
     margin-top: 60px;
 }
-.my-a:hover .fas {
-    color: #05853a;
+@media screen and (max-width: 767px) {
+    .pos {
+        margin-left: 17px;
+        margin-top: 17px;
+    }
+    p {
+        font-size: 5vw;
+        margin-right: 50px;
+    }
+    p.article {
+        font-size: 4vw;
+    }
 }
