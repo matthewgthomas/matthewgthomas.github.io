@@ -7,6 +7,10 @@ h1 {
 	font-size: 6.5vw;
 	margin-top: 0px;
 }
+h2 {
+	font-size: 5vw;
+	margin-top: 0px;
+}
 a {
     color: #eaeaea;
     text-decoration: underline dashed #05853a;
