@@ -1,15 +1,190 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Dr Matthew Gwynfryn Thomas | researcher, writer</title>
+    <meta charset="utf-8">
     <meta name="description" content="Dr Matthew Gwynfryn Thomas says hello. He is a researcher and writer. Say hello back if you like humans and stories and science."/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="canonical" href="https://matthewgthomas.co.uk"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@500&display=swap" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/19ee0f2950.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/"/>
-    <link rel="stylesheet" type="text/css" href="not-giving-a-damn.css"/>
+    <script src="https://kit.fontawesome.com/19ee0f2950.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-color: #F5F5DC;
+            --text-color: #2F4F4F;
+            --link-color: #4682B4;
+            --link-hover: #20B2AA;
+            --accent-color: #778899;
+            --container-width: 800px;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Courier New", Courier, monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            width: 90%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--accent-color);
+            margin: 2rem auto;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem 0;
+            color: var(--text-color);
+            border-bottom: 3px dashed var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /*
+        nav {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 3px dashed var(--accent-color);
+        }
+        */
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: var(--link-color);
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--link-hover);
+            transform: translateX(10px);
+        }
+
+        .nav-item span {
+            font-size: 1.2rem;
+            margin-left: 0.5rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 3px dashed var(--accent-color);
+        }
+
+        .social-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--link-hover);
+        }
+
+        .fa, .fas, .fab {
+            font-size: 1.5rem;
+        }
+
+        /* Retro decorative elements */
+        .container::before {
+            content: "<!-- Hello, World! -->";
+            display: block;
+            color: var(--accent-color);
+            font-family: monospace;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+        /*
+        .container::after {
+            content: "</html>";
+            display: block;
+            color: var(--accent-color);
+            font-family: monospace;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+        */
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-item span {
+                font-size: 1rem;
+            }
+
+            .fa, .fas, .fab {
+                font-size: 1.2rem;
+            }
+        }
+
+        /*
+            ASCII art header for extra nostalgia
+            Using Sub-Zero font from https://www.patorjk.com/software/taag
+        */
+        .ascii-art, .ascii-art-m, .ascii-art-g, .ascii-art-t, .ascii-art-dr {
+            display: none;
+        }
+
+        @media screen and (min-width: 650px) {
+            .ascii-art-m {
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .ascii-art-g {
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media screen and (min-width: 565px) {
+            .ascii-art-t {
+                display: block;
+                margin-bottom: 2rem;
+                border-bottom: 3px dashed var(--accent-color);
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        @media screen and (min-width: 565px) and (max-width: 649px) {
+            .ascii-art-dr {
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Show/hide non-ASCII art header, depending on screen width */
+        .mgt-name {
+            display: none;
+        }
+
+        @media screen and (max-width: 564px) {
+            .mgt-name {
+                display: block;
+            }
+        }
+    </style>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHBDBZB7K0"></script>
     <script>
@@ -21,30 +196,71 @@
     </script>
 </head>
 <body>
-<div class="pos">
-    <h1>Matthew Gwynfryn Thomas</h1>
-    
-    <a href="writing.html" style="text-decoration: none;">
-        <div class="my-a">
-            <i class="fas fa-pencil-alt fa-fw"></i>
-            <span>&nbsp;Writing</span>
+    <div class="container">
+        <div class="ascii-art-dr">
+            <pre>
+ _____     ______                                                                          
+/\  __-.  /\  == \                                                                         
+\ \ \/\ \ \ \  __<                                                                         
+ \ \____-  \ \_\ \_\                                                                       
+  \/____/   \/_/ /_/ 
+            </pre>
         </div>
-    </a>
-    
-    <br/><span style="font-size: 8px;">&nbsp;</span><br/>
-    
-    <a href="research.html" style="text-decoration: none;">
-        <div class="my-a">
-            <i class="fas fa-poll-h fa-fw"></i>
-            <span>&nbsp;Research</span>
+        <div class="ascii-art-m">
+            <pre>
+ __    __     ______     ______   ______   __  __     ______     __     __  
+/\ "-./  \   /\  __ \   /\__  _\ /\__  _\ /\ \_\ \   /\  ___\   /\ \  _ \ \ 
+\ \ \-./\ \  \ \  __ \  \/_/\ \/ \/_/\ \/ \ \  __ \  \ \  __\   \ \ \/ ".\ \
+ \ \_\ \ \_\  \ \_\ \_\    \ \_\    \ \_\  \ \_\ \_\  \ \_____\  \ \__/".~\_\
+  \/_/  \/_/   \/_/\/_/     \/_/     \/_/   \/_/\/_/   \/_____/   \/_/   \/_/
+            </pre>
         </div>
-    </a>
+        <div class="ascii-art-g">
+            <pre>
+  ______     __     __     __  __     __   __     ______   ______     __  __     __   __  
+ /\  ___\   /\ \  _ \ \   /\ \_\ \   /\ "-.\ \   /\  ___\ /\  == \   /\ \_\ \   /\ "-.\ \ 
+ \ \ \__ \  \ \ \/ ".\ \  \ \____ \  \ \ \-.  \  \ \  __\ \ \  __<   \ \____ \  \ \ \-.  \
+  \ \_____\  \ \__/".~\_\  \/\_____\  \ \_\\"\_\  \ \_\    \ \_\ \_\  \/\_____\  \ \_\\"\_\
+   \/_____/   \/_/   \/_/   \/_____/   \/_/ \/_/   \/_/     \/_/ /_/   \/_____/   \/_/ \/_/
+            </pre>        
+        </div>
+        <div class="ascii-art-t">
+            <pre>
+ ______   __  __     ______     __    __     ______     ______    
+/\__  _\ /\ \_\ \   /\  __ \   /\ "-./  \   /\  __ \   /\  ___\  
+\/_/\ \/ \ \  __ \  \ \ \/\ \  \ \ \-./\ \  \ \  __ \  \ \___  \ 
+   \ \_\  \ \_\ \_\  \ \_____\  \ \_\ \ \_\  \ \_\ \_\  \/\_____\
+    \/_/   \/_/\/_/   \/_____/   \/_/  \/_/   \/_/\/_/   \/_____/
+            </pre>        
+        </div>
 
-    <br/><span style="font-size: 8px;">&nbsp;</span><br/>
-    
-    <a href="https://github.com/matthewgthomas/" target="_blank"><i class="fab fa-github fa-fw"></i></a>
-    <a href="https://twitter.com/matthewgthomas" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
-    <a href="https://www.linkedin.com/in/matthewgthomas/" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
-</div>
+        <div class="mgt-name">
+            <h1>Matthew Gwynfryn Thomas</h1>
+        </div>
+        
+        <nav>
+            <a href="writing.html" class="nav-item">
+                <i class="fas fa-pencil-alt fa-fw"></i>
+                <span>Writing</span>
+            </a>
+
+            <a href="research.html" class="nav-item">
+                <i class="fas fa-poll-h fa-fw"></i>
+                <span>Research</span>
+            </a>
+        </nav>
+
+        <div class="social-links">
+            <a href="https://github.com/matthewgthomas/" target="_blank" rel="noopener">
+                <i class="fab fa-github fa-fw"></i>
+            </a>
+            <a href="https://twitter.com/matthewgthomas" target="_blank" rel="noopener">
+                <i class="fab fa-twitter fa-fw"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/matthewgthomas/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin fa-fw"></i>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
