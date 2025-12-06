@@ -4,22 +4,22 @@ import './Writing.css';
 
 const articles = [
     {
-        category: 'AI & Data Science',
-        title: 'The Ghost in the Latent Space',
-        link: '#',
-        summary: 'Exploring the emergent behaviors of large language models.'
+        category: 'AI',
+        title: 'Don’t let AI do your thinking for you',
+        link: 'https://medium.com/@matthewgthomas/dont-let-ai-do-your-thinking-for-you-6504a2d225e3',
+        summary: 'Artificial intelligence can boost your creativity and critical thinking, if you use it wisely.'
+    },
+    {
+        category: 'Humanitarian',
+        title: 'An opinionated guide to the Indices of Deprivation',
+        link: 'https://medium.com/data-and-insight-hub-at-british-red-cross/an-opinionated-guide-to-the-indices-of-deprivation-703d1fadecde',
+        summary: "Nearly 8 million people on low incomes don't live in deprived areas. How can we be smarter about how we use deprivation data?"
     },
     {
         category: 'Science Journalism',
-        title: 'Quantum Weirdness in Biological Systems',
-        link: '#',
-        summary: 'How photosynthesis might rely on quantum coherence.'
-    },
-    {
-        category: 'Fiction',
-        title: 'Neon Rain',
-        link: '#',
-        summary: 'A short story about a detective in a city altering its own layout.'
+        title: 'BioNews',
+        link: 'https://www.progress.org.uk/about-us/people/matthew-thomas/',
+        summary: 'I used to write for BioNews, a publication focusing on the science, law and ethics of reproduction and genetics. I covered a variety of topics over the years, eventually specialising in genetic ancestry testing.'
     }
 ];
 
@@ -34,11 +34,19 @@ export default function Writing() {
                     <h1>Writing</h1>
                 </div>
 
+                <div className="blurb">
+                    <p>
+                        Over the years, I've published a variety of non-fiction (science journalism, pop anthropology, op eds and essays) and fiction (short stories and poetry).
+                    </p>
+                </div>
+
                 <div className="categories-filter">
                     <button className="filter-btn active">ALL</button>
                     <button className="filter-btn">AI</button>
-                    <button className="filter-btn">FICTION</button>
-                    <button className="filter-btn">JOURNALISM</button>
+                    <button className="filter-btn">HUMANITARIAN</button>
+                    <button className="filter-btn">POEMS</button>
+                    <button className="filter-btn">SCIENCE JOURNALISM</button>
+                    <button className="filter-btn">STORIES</button>
                 </div>
 
                 <div className="articles-grid">
