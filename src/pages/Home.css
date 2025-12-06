@@ -2,10 +2,73 @@
 .home-scene {
     width: 100vw;
     height: 100vh;
+    background-image: url('../assets/scene_bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .home-scene {
+        background-image: url('../assets/scene_bg_mobile.png');
+    }
+
+    /* Re-position Hotspots for Vertical Layout */
+    /* Top: Research (Bookshelf) */
+    .research-spot {
+        top: 5% !important;
+        left: 10% !important;
+        width: 80% !important;
+        height: 25% !important;
+    }
+
+    /* Middle: Writing (Desk) */
+    .writing-spot {
+        top: 35% !important;
+        /* Overriding bottom positioning */
+        bottom: auto !important;
+        left: 10% !important;
+        width: 80% !important;
+        height: 25% !important;
+    }
+
+    /* Bottom: Projects (Workbench) */
+    .projects-spot {
+        bottom: 5% !important;
+        left: 10% !important;
+        right: auto !important;
+        width: 80% !important;
+        height: 25% !important;
+    }
+
+    /* Adjust Cats */
+    .cat1-pos {
+        bottom: 40% !important;
+        /* On Desk */
+        left: 5% !important;
+        transform: scale(0.8);
+    }
+
+    .cat2-pos {
+        bottom: 10% !important;
+        /* On Workbench */
+        right: 5% !important;
+        transform: scale(0.8);
+    }
+
+    /* Adjust Title */
+    .scene-title {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    .scene-title h1 {
+        font-size: 1rem;
+    }
 }
 
 /* Title Top Left */
@@ -29,16 +92,38 @@
 .hotspot {
     position: absolute;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 2px solid rgba(116, 255, 94, 0.3);
     transition: all 0.2s;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.05);
-    /* Slight sheen to make them visible for testing */
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 0 10px rgba(116, 255, 94, 0.2);
+    animation: hotspot-pulse 3s infinite;
+}
+
+@keyframes hotspot-pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(116, 255, 94, 0.1);
+        border-color: rgba(116, 255, 94, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(116, 255, 94, 0.4);
+        border-color: rgba(116, 255, 94, 0.5);
+        background: rgba(116, 255, 94, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(116, 255, 94, 0.1);
+        border-color: rgba(116, 255, 94, 0.2);
+    }
 }
 
 .hotspot:hover {
     border-color: var(--color-highlight);
-    background: rgba(116, 255, 94, 0.2);
+    background: rgba(116, 255, 94, 0.3);
+    animation: none;
+    /* Stop pulsing on hover */
+    box-shadow: 0 0 20px var(--color-highlight);
 }
 
 .hotspot-label {

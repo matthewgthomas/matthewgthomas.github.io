@@ -41,7 +41,7 @@ export default function Home() {
     };
 
     return (
-        <div className="home-scene" style={{ backgroundImage: `url(${sceneBg})` }}>
+        <div className="home-scene">
 
             {/* Title Overlay */}
             <div className="scene-title">
