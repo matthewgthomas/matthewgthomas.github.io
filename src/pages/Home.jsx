@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CatSprite from '../components/CatSprite';
 import DialogueBox from '../components/DialogueBox';
-import cat1 from '../assets/cat_sprite_1.png';
-import cat2 from '../assets/cat_sprite_2.png';
-import sceneBg from '../assets/scene_bg.png';
 import './Home.css';
 
 const DIALOGUE_TREE = {
@@ -74,15 +70,6 @@ export default function Home() {
                 onMouseLeave={handleLeave}
             >
                 <div className="hotspot-label">PROJECTS</div>
-            </div>
-
-            {/* Cats in the scene - positioned absolutely */}
-            <div className="cat-in-scene cat1-pos">
-                <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={2} scale={0.3} duration="2s" />
-            </div>
-
-            <div className="cat-in-scene cat2-pos">
-                <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={1} scale={0.3} duration="1.5s" />
             </div>
 
             {/* Persistent Dialogue Box at bottom */}

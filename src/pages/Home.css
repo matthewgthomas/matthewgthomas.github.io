@@ -1,105 +1,33 @@
 /* Scene Container - fills viewport */
 .home-scene {
-    width: 100vw;
-    height: 100dvh;
-    /* Dynamic viewport height for functional mobile support */
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-image: url('../assets/scene_bg.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/bg-desktop.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     overflow: hidden;
 }
 
+/* Tablet Layout */
 @media (max-width: 1024px) {
     .home-scene {
-        background-image: url('../assets/scene_bg_mobile.png');
+        background-image: url('../assets/bg-tablet.png');
         background-position: center top;
-        /* Anchor to top to show bookshelf first */
-        /* Ensure no weird repeating or containment */
-        background-size: cover;
-        background-attachment: scroll;
-        /* Prevent fixed bg issues on mobile */
-    }
-
-    /* Re-position Hotspots for Vertical Layout */
-    /* Top: Research (Bookshelf) */
-    .research-spot {
-        top: 5% !important;
-        left: 10% !important;
-        width: 80% !important;
-        height: 25% !important;
-    }
-
-    /* Middle: Writing (Desk) */
-    .writing-spot {
-        top: 35% !important;
-        /* Overriding bottom positioning */
-        bottom: auto !important;
-        left: 10% !important;
-        width: 80% !important;
-        height: 25% !important;
-    }
-
-    /* Bottom: Projects (Workbench) */
-    .projects-spot {
-        bottom: 5% !important;
-        left: 10% !important;
-        right: auto !important;
-        width: 80% !important;
-        height: 25% !important;
-    }
-
-    /* Adjust Cats */
-    .cat1-pos {
-        bottom: 40% !important;
-        /* On Desk */
-        left: 5% !important;
-        transform: scale(0.8);
-    }
-
-    .cat2-pos {
-        bottom: 10% !important;
-        /* On Workbench */
-        right: 5% !important;
-        transform: scale(0.8);
-    }
-
-    /* Adjust Title */
-    .scene-title {
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        text-align: center;
-    }
-
-    .scene-title h1 {
-        font-size: 1rem;
     }
 }
 
-/* Title Top Left */
-.scene-title {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border: 2px solid var(--color-highlight);
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .home-scene {
+        background-image: url('../assets/bg-mobile.png');
+    }
 }
 
-.scene-title h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: var(--color-highlight);
-}
-
-/* Hotspots */
+/* Base Hotspot Styles */
 .hotspot {
     position: absolute;
     cursor: pointer;
@@ -133,7 +61,6 @@
     border-color: var(--color-highlight);
     background: rgba(116, 255, 94, 0.3);
     animation: none;
-    /* Stop pulsing on hover */
     box-shadow: 0 0 20px var(--color-highlight);
 }
 
@@ -149,55 +76,98 @@
     padding: 2px 5px;
     display: none;
     white-space: nowrap;
+    pointer-events: none;
 }
 
 .hotspot:hover .hotspot-label {
     display: block;
 }
 
-/* Position Hotspots based on the generated image description */
-/* Left Desk (Writing) */
-.writing-spot {
-    bottom: 20%;
-    left: 5%;
-    width: 25%;
-    height: 30%;
-}
+/* --- HOTSPOT POSITIONS --- */
 
-/* Center Bookshelf (Research) */
-.research-spot {
-    top: 20%;
-    left: 35%;
-    width: 25%;
+/* DESKTOP (Default: Horizontal) */
+/* Left: Desk (Writing) */
+.writing-spot {
+    bottom: 0;
+    left: 5%;
+    width: 30%;
     height: 40%;
 }
 
-/* Right Workbench (Projects) */
+/* Center: Bookshelf (Research) */
+.research-spot {
+    top: 15%;
+    left: 35%;
+    width: 30%;
+    height: 60%;
+}
+
+/* Right: Workbench (Projects) */
 .projects-spot {
-    bottom: 15%;
+    bottom: 0;
     right: 5%;
     width: 30%;
-    height: 35%;
+    height: 40%;
 }
 
-/* Cats Positioning */
-.cat-in-scene {
+/* TABLET & MOBILE (Stacked Layout) */
+@media (max-width: 1024px) {
+
+    /* Top: Bookshelf (Research) */
+    .research-spot {
+        top: 5%;
+        left: 10%;
+        width: 80%;
+        height: 30%;
+    }
+
+    /* Middle: Desk (Writing) */
+    .writing-spot {
+        top: 40%;
+        left: 10%;
+        width: 80%;
+        height: 25%;
+        bottom: auto;
+        /* Reset desktop constraints */
+    }
+
+    /* Bottom: Workbench (Projects) */
+    .projects-spot {
+        bottom: 5%;
+        /* Anchor to bottom */
+        left: 10%;
+        right: auto;
+        width: 80%;
+        height: 25%;
+        top: auto;
+    }
+}
+
+/* Title Top Left */
+.scene-title {
     position: absolute;
-    z-index: 40;
-    pointer-events: none;
-    /* Let clicks pass through to hotspots if needed, or make them clickable too */
+    top: 20px;
+    left: 30px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border: 2px solid var(--color-highlight);
 }
 
-.cat1-pos {
-    bottom: 25%;
-    /* On/Near Desk */
-    left: 20%;
+.scene-title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--color-highlight);
 }
 
-.cat2-pos {
-    bottom: 20%;
-    /* Near Workbench */
-    right: 25%;
+@media (max-width: 768px) {
+    .scene-title {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
 }
 
 /* Dialogue Overlay Fixed at Bottom */
@@ -205,6 +175,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 100;
 }
 
 .social-links-minimal {
@@ -213,6 +184,7 @@
     right: 20px;
     display: flex;
     gap: 15px;
+    z-index: 60;
 }
 
 .social-links-minimal a {
