@@ -51,14 +51,20 @@ export default function Writing() {
 
                 <div className="articles-grid">
                     {articles.map((article, index) => (
-                        <div key={index} className="article-card">
+                        <a
+                            key={index}
+                            href={article.link}
+                            className="article-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <div className="card-header">
                                 <span className="category-tag">{article.category}</span>
                             </div>
                             <h3>{article.title}</h3>
                             <p>{article.summary}</p>
-                            <a href={article.link} className="read-more">READ &gt;</a>
-                        </div>
+                            <span className="read-more">READ &gt;</span>
+                        </a>
                     ))}
                 </div>
             </div>

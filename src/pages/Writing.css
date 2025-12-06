@@ -65,11 +65,16 @@
     padding: 1rem;
     position: relative;
     transition: transform 0.2s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .article-card:hover {
     transform: translateY(-5px);
     border-color: var(--color-highlight);
+    text-decoration: none;
+
 }
 
 .card-header {
