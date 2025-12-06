@@ -1,0 +1,366 @@
+/* ---------- Root tokens ---------- */
+
+:root {
+  --color-bg: #fdfcf7;
+  --color-page: #ffffff;
+  --color-text: #111111;
+  --color-muted: #4b5563;
+  --color-border: #e5e7eb;
+  --color-accent: #c1121f;
+  --color-accent-soft: #fef2f2;
+
+  --font-heading: "Libre Baskerville", "Times New Roman", serif;
+  --font-body: "Source Serif Pro", Georgia, "Times New Roman", serif;
+
+  --max-width: 960px;
+}
+
+/* ---------- Global reset-ish ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------- Layout shells ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-page);
+}
+
+.site-header-inner,
+.site-main-inner,
+.site-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
+}
+
+.site-main {
+  padding-bottom: 3rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-page);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+/* ---------- Top navigation ---------- */
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.18s ease-out;
+}
+
+.site-nav a:hover::after {
+  width: 100%;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.site-nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ---------- Hero + sections ---------- */
+
+.hero {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 0.75rem 0;
+}
+
+.hero-strap {
+  font-size: 1.05rem;
+  max-width: 40rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+.hero-meta {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ---------- Section styling ---------- */
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.4rem;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin-bottom: 0.1rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* ---------- Cards & grids ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--color-page);
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.1rem;
+}
+
+.card-heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.card-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  margin-bottom: 0.25rem;
+}
+
+.card-body {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.card-link {
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent);
+}
+
+/* ---------- Links & buttons ---------- */
+
+a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  background-color: transparent;
+}
+
+.button-link:hover {
+  background-color: var(--color-accent-soft);
+  text-decoration: none;
+}
+
+/* ---------- Typography helpers ---------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+/* Pull-quote / highlight boxes */
+
+.callout {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 0.9rem;
+  margin: 1rem 0 1.2rem 0;
+  font-style: italic;
+}
+
+.callout-haiku {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-page);
+  padding: 0.9rem 1rem;
+  font-style: italic;
+  max-width: 26rem;
+}
+
+/* Lists of articles / publications */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 0;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-title {
+  font-weight: 600;
+}
+
+.list-meta {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.list-actions {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.list-actions a {
+  margin-right: 0.75rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+@media (max-width: 720px) {
+  .site-header-inner {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .site-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .hero {
+    margin-top: 1.6rem;
+  }
+}
