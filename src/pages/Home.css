@@ -1,113 +1,128 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    padding: 2rem;
-}
-
-.title-section h1 {
-    font-size: 2.5rem;
-    color: var(--color-highlight);
-    text-shadow: 4px 4px 0px #000;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-.subtitle {
-    font-family: var(--font-body);
-    font-size: 1.5rem;
-    color: var(--color-fg);
-    margin-bottom: 2rem;
-}
-
-.cats-display {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin: 2rem 0;
-}
-
-.cat-wrapper {
-    border-bottom: 4px solid var(--color-ui-border);
-    /* Like a floor */
-    padding-bottom: 10px;
-}
-
-.social-links {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.retro-btn {
-    display: inline-block;
-    background: var(--color-ui-bg);
-    border: 4px solid var(--color-ui-border);
-    padding: 1rem 2rem;
-    font-family: var(--font-display);
-    font-size: 1rem;
-    color: var(--color-fg);
-    transition: all 0.2s;
-    box-shadow: 4px 4px 0px #000;
-}
-
-.retro-btn:hover {
-    background: var(--color-highlight);
-    color: var(--color-bg);
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Update/Append to existing styles */
-
-.cat-wrapper.interactive {
-    cursor: pointer;
+/* Scene Container - fills viewport */
+.home-scene {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     position: relative;
-    transition: transform 0.2s;
+    overflow: hidden;
 }
 
-.cat-wrapper.interactive:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 10px var(--color-highlight));
-}
-
-.cat-wrapper.active {
-    filter: drop-shadow(0 0 15px var(--color-accent));
-}
-
-.cat-label {
+/* Title Top Left */
+.scene-title {
     position: absolute;
-    top: -30px;
+    top: 20px;
+    left: 30px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border: 2px solid var(--color-highlight);
+}
+
+.scene-title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--color-highlight);
+}
+
+/* Hotspots */
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.05);
+    /* Slight sheen to make them visible for testing */
+}
+
+.hotspot:hover {
+    border-color: var(--color-highlight);
+    background: rgba(116, 255, 94, 0.2);
+}
+
+.hotspot-label {
+    position: absolute;
+    top: -25px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--color-bg);
-    padding: 2px 5px;
-    border: 1px solid var(--color-fg);
+    color: var(--color-highlight);
     font-family: var(--font-display);
     font-size: 0.8rem;
-    opacity: 0;
-    transition: opacity 0.2s;
-    pointer-events: none;
+    padding: 2px 5px;
+    display: none;
     white-space: nowrap;
 }
 
-.cat-wrapper.interactive:hover .cat-label {
-    opacity: 1;
+.hotspot:hover .hotspot-label {
+    display: block;
+}
+
+/* Position Hotspots based on the generated image description */
+/* Left Desk (Writing) */
+.writing-spot {
+    bottom: 20%;
+    left: 5%;
+    width: 25%;
+    height: 30%;
+}
+
+/* Center Bookshelf (Research) */
+.research-spot {
+    top: 20%;
+    left: 35%;
+    width: 25%;
+    height: 40%;
+}
+
+/* Right Workbench (Projects) */
+.projects-spot {
+    bottom: 15%;
+    right: 5%;
+    width: 30%;
+    height: 35%;
+}
+
+/* Cats Positioning */
+.cat-in-scene {
+    position: absolute;
+    z-index: 40;
+    pointer-events: none;
+    /* Let clicks pass through to hotspots if needed, or make them clickable too */
+}
+
+.cat1-pos {
+    bottom: 25%;
+    /* On/Near Desk */
+    left: 20%;
+}
+
+.cat2-pos {
+    bottom: 20%;
+    /* Near Workbench */
+    right: 25%;
+}
+
+/* Dialogue Overlay Fixed at Bottom */
+.scene-dialogue {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .social-links-minimal {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
-    font-size: 0.8rem;
-    opacity: 0.7;
+    display: flex;
+    gap: 15px;
 }
 
 .social-links-minimal a {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
     color: var(--color-fg);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
 }
