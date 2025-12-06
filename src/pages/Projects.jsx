@@ -4,22 +4,74 @@ import './Projects.css';
 
 const projects = [
     {
-        name: 'Fermi Estimation Tool',
-        desc: 'Bayesian estimation tool for quick calculations.',
-        tech: ['React', 'Math.js'],
-        link: '#'
+        name: 'Burn After Burning',
+        desc: 'An interactive story about gratitude.',
+        tech: ['Python', 'R', 'Svelte'],
+        link: 'https://matthewgthomas.co.uk/gratitude/',
+        code: 'https://github.com/matthewgthomas/gratitude'
     },
     {
-        name: 'Cat GAN',
-        desc: 'Generating pixel art cats using adversarial networks.',
-        tech: ['Python', 'PyTorch'],
-        link: '#'
+        name: 'Flavours',
+        desc: "Exploring Niki Segnit's The Flavour Thesaurus.",
+        tech: ['R', 'Svelte'],
+        link: 'https://matthewgthomas.co.uk/flavours/',
+        code: 'https://github.com/matthewgthomas/flavours'
     },
     {
-        name: 'Tensor Radiation',
-        desc: 'This website! A retro adventure game portfolio.',
-        tech: ['Vite', 'React'],
-        link: '#'
+        name: 'Seat Seer: Track election forecasts',
+        desc: 'A tracker and explorer for seat projections in the 2024 UK General Election.',
+        tech: ['R', 'Shiny'],
+        link: 'https://matthewgthomas.shinyapps.io/seatseer/',
+        code: 'https://github.com/matthewgthomas/track-uk-election-forecasts'
+    },
+    {
+        name: 'Bayesian Fermi Estimation',
+        desc: 'A web app for estimating unknown quantities based on back-of-the-envelope calculations using expert knowledge.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        link: 'https://matthewgthomas.co.uk/fermi/',
+        code: 'https://github.com/matthewgthomas/fermi'
+    },
+    {
+        name: 'Track price changes',
+        desc: 'Explore inflation trends in the UK.',
+        tech: ['R', 'Svelte'],
+        link: 'https://matthewgthomas.co.uk/price-changes/',
+        code: 'https://github.com/matthewgthomas/price-changes'
+    },
+    {
+        name: 'Explore deprivation in England',
+        desc: 'Shiny app exploring the Indices of Deprivation in England.',
+        tech: ['R', 'Shiny'],
+        link: 'https://matthewgthomas.shinyapps.io/deprivation-explorer/',
+        code: 'https://github.com/matthewgthomas/deprivation-explorer'
+    },
+    {
+        name: 'Compare risk maps',
+        desc: 'Shiny app comparing the overlaps and differences between various disaster risk / resilience / vulnerability maps, such as flooding, heatwaves, deprivation, and social fabric.',
+        tech: ['R', 'Shiny'],
+        link: 'https://matthewgthomas.shinyapps.io/compare-risk-maps/',
+        code: 'https://github.com/matthewgthomas/compare-risk-maps'
+    },
+    {
+        name: 'NHS winter sitrep explorer',
+        desc: 'R Shiny dashboard for exploring NHS England winter situation reports.',
+        tech: ['R', 'Shiny'],
+        link: 'https://britishredcross.shinyapps.io/sitrep-explorer/',
+        code: 'https://github.com/matthewgthomas/sitrep-explorer'
+    },
+    {
+        name: 'Geographical health inequalities',
+        desc: 'Explore differences in (healthy) life expectancy and deprivation by regions in England.',
+        tech: ['R'],
+        link: 'https://matthewgthomas.co.uk/geographical-health-inequities/',
+        code: 'https://github.com/matthewgthomas/geographical-health-inequities'
+    },
+    {
+        name: 'Covid-19 and regional deprivation',
+        desc: 'Exploring associations between Covid-19 and regional deprivation in England.',
+        tech: ['R'],
+        link: 'https://matthewgthomas.co.uk/covid-19-regional-deprivation/',
+        code: 'https://github.com/matthewgthomas/covid-19-regional-deprivation'
     }
 ];
 
@@ -31,7 +83,7 @@ export default function Projects() {
                     <div className="mascot-wrapper">
                         <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={1} scale={0.4} />
                     </div>
-                    <h1>Side Projects</h1>
+                    <h1>Nerdy Projects</h1>
                 </div>
 
                 <div className="projects-grid">
@@ -44,6 +96,7 @@ export default function Projects() {
                                     {project.tech.map(t => <span key={t} className="tech-badge">{t}</span>)}
                                 </div>
                                 <a href={project.link} className="project-link">LAUNCH</a>
+                                <a href={project.code} className="project-link">VIEW CODE</a>
                             </div>
                         </div>
                     ))}
