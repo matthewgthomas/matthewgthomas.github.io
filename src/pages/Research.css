@@ -1,0 +1,45 @@
+.research-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.research-intro {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    border-left: 4px solid var(--color-highlight);
+    padding-left: 1rem;
+}
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: baseline;
+}
+
+.pub-year {
+    font-family: var(--font-display);
+    color: var(--color-accent);
+}
+
+.pub-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.pub-title {
+    font-size: 1.2rem;
+    color: var(--color-highlight);
+    margin-bottom: 0.2rem;
+}
+
+.pub-journal {
+    font-style: italic;
+    color: #aaa;
+}

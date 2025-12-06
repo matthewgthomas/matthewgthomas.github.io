@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  /* LucasArts / SCUMM inspired palette */
+  --color-bg: #1a0c25;       /* Deep purple darkness */
+  --color-fg: #dcdacb;       /* Beige/white text */
+  --color-highlight: #74ff5e; /* Radioactive green */
+  --color-accent: #ff0055;   /* Hot pink/red for verbs/danger */
+  --color-ui-bg: #2d1b3e;    /* UI panel background */
+  --color-ui-border: #5e3b7d;/* UI border */
+  
+  --font-display: 'Press Start 2P', cursive;
+  --font-body: 'VT323', monospace;
+  
+  --spacing-unit: 4px; /* Pixel art grid feel */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 20px; /* Large readable pixel font */
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  image-rendering: pixelated; /* Crisp pixels */
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, buttons {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+
+/* Custom Scrollbar for Chrome/Safari/Edge */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ui-border);
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-highlight);
+}
