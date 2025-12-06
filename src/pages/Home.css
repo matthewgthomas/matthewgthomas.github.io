@@ -1,17 +1,28 @@
 /* Scene Container - fills viewport */
 .home-scene {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
+    /* Dynamic viewport height for functional mobile support */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background-image: url('../assets/scene_bg.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .home-scene {
         background-image: url('../assets/scene_bg_mobile.png');
+        background-position: center top;
+        /* Anchor to top to show bookshelf first */
+        /* Ensure no weird repeating or containment */
+        background-size: cover;
+        background-attachment: scroll;
+        /* Prevent fixed bg issues on mobile */
     }
 
     /* Re-position Hotspots for Vertical Layout */
