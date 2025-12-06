@@ -25,33 +25,34 @@ const articles = [
 
 export default function Writing() {
     return (
-        <div className="writing-container">
-            <div className="page-header">
-                <div className="mascot-wrapper">
-                    <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={1} scale={0.4} />
-                    <span className="mascot-label">THE SCRIBE</span>
-                </div>
-                <h1>Writing Portfolio</h1>
-            </div>
-
-            <div className="categories-filter">
-                <button className="filter-btn active">ALL</button>
-                <button className="filter-btn">AI</button>
-                <button className="filter-btn">FICTION</button>
-                <button className="filter-btn">JOURNALISM</button>
-            </div>
-
-            <div className="articles-grid">
-                {articles.map((article, index) => (
-                    <div key={index} className="article-card">
-                        <div className="card-header">
-                            <span className="category-tag">{article.category}</span>
-                        </div>
-                        <h3>{article.title}</h3>
-                        <p>{article.summary}</p>
-                        <a href={article.link} className="read-more">READ &gt;</a>
+        <div className="writing-page">
+            <div className="writing-container">
+                <div className="page-header">
+                    <div className="mascot-wrapper">
+                        <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={1} scale={0.4} />
                     </div>
-                ))}
+                    <h1>Writing</h1>
+                </div>
+
+                <div className="categories-filter">
+                    <button className="filter-btn active">ALL</button>
+                    <button className="filter-btn">AI</button>
+                    <button className="filter-btn">FICTION</button>
+                    <button className="filter-btn">JOURNALISM</button>
+                </div>
+
+                <div className="articles-grid">
+                    {articles.map((article, index) => (
+                        <div key={index} className="article-card">
+                            <div className="card-header">
+                                <span className="category-tag">{article.category}</span>
+                            </div>
+                            <h3>{article.title}</h3>
+                            <p>{article.summary}</p>
+                            <a href={article.link} className="read-more">READ &gt;</a>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

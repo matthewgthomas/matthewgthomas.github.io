@@ -25,28 +25,29 @@ const projects = [
 
 export default function Projects() {
     return (
-        <div className="projects-container">
-            <div className="page-header">
-                <div className="mascot-wrapper">
-                    <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={1} scale={0.4} />
-                    <span className="mascot-label">THE TINKER</span>
-                </div>
-                <h1>Side Projects</h1>
-            </div>
-
-            <div className="projects-grid">
-                {projects.map((project, index) => (
-                    <div key={index} className="project-card">
-                        <div className="project-frame">
-                            <h2>{project.name}</h2>
-                            <p>{project.desc}</p>
-                            <div className="tech-stack">
-                                {project.tech.map(t => <span key={t} className="tech-badge">{t}</span>)}
-                            </div>
-                            <a href={project.link} className="project-link">LAUNCH</a>
-                        </div>
+        <div className="projects-page">
+            <div className="projects-container">
+                <div className="page-header">
+                    <div className="mascot-wrapper">
+                        <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={1} scale={0.4} />
                     </div>
-                ))}
+                    <h1>Side Projects</h1>
+                </div>
+
+                <div className="projects-grid">
+                    {projects.map((project, index) => (
+                        <div key={index} className="project-card">
+                            <div className="project-frame">
+                                <h2>{project.name}</h2>
+                                <p>{project.desc}</p>
+                                <div className="tech-stack">
+                                    {project.tech.map(t => <span key={t} className="tech-badge">{t}</span>)}
+                                </div>
+                                <a href={project.link} className="project-link">LAUNCH</a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

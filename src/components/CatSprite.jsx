@@ -9,7 +9,7 @@ export default function CatSprite({
     rows = 3,
     row = 0, // 0-indexed row for specific animation (walk, sit, etc)
     scale = 1,
-    duration = '0.8s'
+    duration = '4s'
 }) {
     const frameWidth = totalWidth / cols;
     const frameHeight = totalHeight / rows;

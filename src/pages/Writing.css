@@ -1,7 +1,34 @@
-.writing-container {
+/* Page Wrapper with Responsive Background */
+.writing-page {
+    min-height: 100vh;
+    background-image: url('../assets/bg-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .writing-page {
+        background-image: url('../assets/bg-tablet.png');
+    }
+}
+
+@media (max-width: 768px) {
+    .writing-page {
+        background-image: url('../assets/bg-mobile.png');
+        padding: 1rem;
+    }
+}
+
+.writing-container {
     max-width: 1000px;
     margin: 0 auto;
+    background: rgba(26, 12, 37, 0.95);
+    /* Dark semi-transparent background */
+    border: 2px solid var(--color-ui-border);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    padding: 2rem;
 }
 
 .categories-filter {
