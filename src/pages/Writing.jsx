@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import CatSprite from '../components/CatSprite';
 import cat1 from '../assets/cat_sprite_1.png';
 import './Writing.css';
@@ -24,6 +25,14 @@ const articles = [
 ];
 
 export default function Writing() {
+    const [activeCategory, setActiveCategory] = useState('ALL');
+
+    const categories = ['ALL', 'AI', 'HUMANITARIAN', 'POEMS', 'SCIENCE JOURNALISM', 'STORIES'];
+
+    const filteredArticles = activeCategory === 'ALL'
+        ? articles
+        : articles.filter(article => article.category.toUpperCase() === activeCategory);
+
     return (
         <div className="writing-page">
             <div className="writing-container">
@@ -41,16 +50,19 @@ export default function Writing() {
                 </div>
 
                 <div className="categories-filter">
-                    <button className="filter-btn active">ALL</button>
-                    <button className="filter-btn">AI</button>
-                    <button className="filter-btn">HUMANITARIAN</button>
-                    <button className="filter-btn">POEMS</button>
-                    <button className="filter-btn">SCIENCE JOURNALISM</button>
-                    <button className="filter-btn">STORIES</button>
+                    {categories.map(category => (
+                        <button
+                            key={category}
+                            className={`filter-btn ${activeCategory === category ? 'active' : ''}`}
+                            onClick={() => setActiveCategory(category)}
+                        >
+                            {category}
+                        </button>
+                    ))}
                 </div>
 
                 <div className="articles-grid">
-                    {articles.map((article, index) => (
+                    {filteredArticles.map((article, index) => (
                         <a
                             key={index}
                             href={article.link}
