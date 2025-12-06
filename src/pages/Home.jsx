@@ -8,7 +8,7 @@ export default function Home() {
         <div className="home-container">
             <div className="title-section">
                 <h1 className="glitch-text">MATTHEW GWYNFRYN THOMAS</h1>
-                <p className="subtitle">ADVENTURER & RESEARCHER</p>
+                <p className="subtitle">WRITER & RESEARCHER</p>
             </div>
 
             <div className="cats-display">
