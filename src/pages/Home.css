@@ -62,3 +62,52 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Update/Append to existing styles */
+
+.cat-wrapper.interactive {
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.cat-wrapper.interactive:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px var(--color-highlight));
+}
+
+.cat-wrapper.active {
+    filter: drop-shadow(0 0 15px var(--color-accent));
+}
+
+.cat-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-bg);
+    padding: 2px 5px;
+    border: 1px solid var(--color-fg);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.cat-wrapper.interactive:hover .cat-label {
+    opacity: 1;
+}
+
+.social-links-minimal {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.social-links-minimal a {
+    color: var(--color-fg);
+}

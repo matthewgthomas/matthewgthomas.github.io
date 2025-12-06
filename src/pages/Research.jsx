@@ -1,3 +1,5 @@
+import CatSprite from '../components/CatSprite';
+import cat1 from '../assets/cat_sprite_1.png';
 import './Research.css';
 
 const publications = [
@@ -24,7 +26,13 @@ const publications = [
 export default function Research() {
     return (
         <div className="research-container">
-            <h1>Research Overview</h1>
+            <div className="page-header">
+                <div className="mascot-wrapper">
+                    <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={2} scale={0.4} />
+                    <span className="mascot-label">THE SCRIBE</span>
+                </div>
+                <h1>Research Overview</h1>
+            </div>
 
             <div className="research-intro">
                 <p>

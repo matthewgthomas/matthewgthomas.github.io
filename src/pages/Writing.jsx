@@ -1,3 +1,5 @@
+import CatSprite from '../components/CatSprite';
+import cat1 from '../assets/cat_sprite_1.png';
 import './Writing.css';
 
 const articles = [
@@ -24,7 +26,13 @@ const articles = [
 export default function Writing() {
     return (
         <div className="writing-container">
-            <h1>Writing Portfolio</h1>
+            <div className="page-header">
+                <div className="mascot-wrapper">
+                    <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={1} scale={0.4} />
+                    <span className="mascot-label">THE SCRIBE</span>
+                </div>
+                <h1>Writing Portfolio</h1>
+            </div>
 
             <div className="categories-filter">
                 <button className="filter-btn active">ALL</button>

@@ -1,3 +1,5 @@
+import CatSprite from '../components/CatSprite';
+import cat2 from '../assets/cat_sprite_2.png';
 import './Projects.css';
 
 const projects = [
@@ -24,7 +26,13 @@ const projects = [
 export default function Projects() {
     return (
         <div className="projects-container">
-            <h1>Side Projects</h1>
+            <div className="page-header">
+                <div className="mascot-wrapper">
+                    <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={1} scale={0.4} />
+                    <span className="mascot-label">THE TINKER</span>
+                </div>
+                <h1>Side Projects</h1>
+            </div>
 
             <div className="projects-grid">
                 {projects.map((project, index) => (
