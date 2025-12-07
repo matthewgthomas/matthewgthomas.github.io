@@ -64,6 +64,7 @@ const publications = [
 export default function Research() {
     return (
         <div className="research-page">
+            <div className="fixed-background" />
             <div className="research-container">
                 <div className="page-header">
                     <div className="mascot-wrapper">

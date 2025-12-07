@@ -35,6 +35,7 @@ export default function Writing() {
 
     return (
         <div className="writing-page">
+            <div className="fixed-background" />
             <div className="writing-container">
                 <div className="page-header">
                     <div className="mascot-wrapper">

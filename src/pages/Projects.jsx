@@ -78,6 +78,7 @@ const projects = [
 export default function Projects() {
     return (
         <div className="projects-page">
+            <div className="fixed-background" />
             <div className="projects-container">
                 <div className="page-header">
                     <div className="mascot-wrapper">
