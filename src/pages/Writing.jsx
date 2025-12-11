@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CatSprite from '../components/CatSprite';
 import cat1 from '../assets/cat_sprite_1.png';
+import cat2 from '../assets/cat_sprite_2.png';
 import './Writing.css';
 
 const articles = [
@@ -42,6 +43,9 @@ export default function Writing() {
                         <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={1} scale={0.4} />
                     </div>
                     <h1>Writing</h1>
+                    <div className="mascot-wrapper">
+                        <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={2} scale={0.4} />
+                    </div>
                 </div>
 
                 <div className="blurb">
