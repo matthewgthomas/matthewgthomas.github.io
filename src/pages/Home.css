@@ -84,6 +84,13 @@
     display: block;
 }
 
+/* Show hotspot labels on mobile/table */
+@media (max-width: 1024px) {
+    .hotspot-label {
+        display: block;
+    }
+}
+
 /* --- HOTSPOT POSITIONS --- */
 
 /* DESKTOP (Default: Horizontal) */
