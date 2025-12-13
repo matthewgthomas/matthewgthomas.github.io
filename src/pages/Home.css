@@ -89,24 +89,24 @@
 /* DESKTOP (Default: Horizontal) */
 /* Left: Desk (Writing) */
 .writing-spot {
-    bottom: 0;
+    bottom: 2%;
     left: 5%;
-    width: 30%;
+    width: 28%;
     height: 40%;
 }
 
 /* Center: Bookshelf (Research) */
 .research-spot {
-    top: 15%;
+    top: 30%;
     left: 35%;
     width: 30%;
-    height: 60%;
+    height: 40%;
 }
 
 /* Right: Workbench (Projects) */
 .projects-spot {
-    bottom: 0;
-    right: 5%;
+    bottom: 2%;
+    right: 3%;
     width: 30%;
     height: 40%;
 }
