@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
@@ -35,8 +35,8 @@ export default function Home() {
             </div>
 
             <div className="social-links-minimal">
-                <a href="https://github.com/matthewgthomas" target="_blank" rel="noopener noreferrer">GITHUB</a>
-                <a href="https://linkedin.com/in/matthewgthomas" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                <Link to="/about">WHO AM I</Link>
+                <Link to="/now">WHAT AM I DOING</Link>
             </div>
         </div>
     );
