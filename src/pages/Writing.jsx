@@ -35,9 +35,9 @@ export default function Writing() {
         : articles.filter(article => article.category.toUpperCase() === activeCategory);
 
     return (
-        <div className="writing-page">
+        <div className="page-wrapper">
             <div className="fixed-background" />
-            <div className="writing-container">
+            <div className="content-container wide">
                 <div className="page-header">
                     <div className="mascot-wrapper">
                         <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={1} scale={0.4} />
@@ -48,7 +48,7 @@ export default function Writing() {
                     </div>
                 </div>
 
-                <div className="blurb">
+                <div className="intro-text">
                     <p>
                         Over the years, I've published a variety of non-fiction (science journalism, pop anthropology, op eds and essays) and fiction (short stories and poetry).
                     </p>

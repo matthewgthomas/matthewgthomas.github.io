@@ -6,9 +6,9 @@ import './About.css';
 
 export default function About() {
     return (
-        <div className="about-page">
+        <div className="page-wrapper">
             <div className="fixed-background" />
-            <div className="about-container">
+            <div className="content-container">
                 <div className="page-header">
                     <div className="mascot-wrapper">
                         <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={2} scale={0.4} />
@@ -19,7 +19,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="about-content">
+                <div className="content-body">
                     <p>
                         I'm a researcher, writer and humanitarian data scientist with a muddled background in computer science and <Link to="/research">evolutionary anthropology</Link>. I also bake, write <Link to="/writing">poems and stories</Link>, and <Link to="/projects">make nerdy things</Link>.
                     </p>

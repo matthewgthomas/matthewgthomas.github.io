@@ -6,9 +6,9 @@ import './Now.css';
 
 export default function Now() {
     return (
-        <div className="now-page">
+        <div className="page-wrapper">
             <div className="fixed-background" />
-            <div className="now-container">
+            <div className="content-container">
                 <div className="page-header">
                     <div className="mascot-wrapper">
                         <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={1} scale={0.4} />
@@ -19,12 +19,12 @@ export default function Now() {
                     </div>
                 </div>
 
-                <div className="now-intro">
+                <div className="intro-text">
                     <p>
                         This is a <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer">now page</a>. I'll share some of what I'm doing now (ish) here. Explore the rest of <Link to="/">my website</Link> to learn more.
                     </p>
                 </div>
-                <div className="now-content">
+                <div className="content-body">
                     <h3>Creating</h3>
                     <ul>
                         <li>This website, inspired by the classic <a href="https://lucasfilm.fandom.com/wiki/LucasArts_adventure_games" target="_blank" rel="noopener noreferrer">LucasArts point-and-click adventure games</a>.</li>

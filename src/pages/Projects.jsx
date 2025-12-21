@@ -78,9 +78,9 @@ const projects = [
 
 export default function Projects() {
     return (
-        <div className="projects-page">
+        <div className="page-wrapper">
             <div className="fixed-background" />
-            <div className="projects-container">
+            <div className="content-container wide">
                 <div className="page-header">
                     <div className="mascot-wrapper">
                         <CatSprite image={cat2} totalWidth={1024} totalHeight={764} row={1} scale={0.4} />

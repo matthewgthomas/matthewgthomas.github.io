@@ -64,9 +64,9 @@ const publications = [
 
 export default function Research() {
     return (
-        <div className="research-page">
+        <div className="page-wrapper">
             <div className="fixed-background" />
-            <div className="research-container">
+            <div className="content-container">
                 <div className="page-header">
                     <div className="mascot-wrapper">
                         <CatSprite image={cat1} totalWidth={1024} totalHeight={790} row={0} scale={0.4} />
@@ -77,39 +77,41 @@ export default function Research() {
                     </div>
                 </div>
 
-                <div className="research-intro">
+                <div className="intro-text">
                     <p>
                         My anthropology research uses evolutionary theory to look at how people cooperate (or not) in households, families and larger groups.
                     </p>
                 </div>
 
-                <p>I did my PhD (titled 'The Dynamics of Human Cooperative Groups') in the <a href="https://www.ucl.ac.uk/social-historical-sciences/anthropology/research/human-evolutionary-ecology-group-heeg" target="_blank" rel="noopener nofollow">Human Evolutionary Ecology Group</a> at UCL in London. You can <a href="http://discovery.ucl.ac.uk/1473717/" rel="nofollow">read it here</a>. Afterwards, I worked as a postdoc for the <a href="http://niku.no/" rel="nofollow">Norwegian Institute for Cultural Heritage Research (NIKU)</a> and the <a href="http://www.nina.no/" rel="nofollow">Norwegian Institute for Nature Research (NINA)</a>, as part of the project, <a href="https://pastoralism-climate-change-policy.com/projects/reign/" target="_blank" rel="noopener nofollow">"ReiGN: Reindeer husbandry in a Globalizing North"</a>.</p>
-                <p>Here's a haiku summary of my research:</p>
-                <blockquote>
-                    <p>People sometimes help<br />friends, fam, neighbours, not witches.<br />But sometimes they don't.</p>
-                </blockquote>
-                <p>... and a summary written using only <a href="http://xkcd.com/1133/" target="_blank" rel="noopener nofollow">the ten hundred most common</a> English words:</p>
-                <blockquote>
-                    <p>We think we know what people are like from how they act in rooms where brain-people in white jackets make them do things. But I want to check how people act in real life. I looked at how people work together in two places - one where they keep animals in the cold land at the top of the world and another place where they grow food around a body of water in a big big land. The people helped their friends, family and other close people. They liked good people and didn't help bad people.</p>
-                </blockquote>
-                <p>I used a mixture of theoretical models and actual, real-life fieldwork to understand patterns of cooperation.</p>
-                <p>For the theoretical bit, I made mathematical models and computer simulations of evolutionary dynamics to look at how mortality in the environment and competition between siblings <a title="Paper about how sibling competition and mortality risks affect birth intervals" href="https://tangledwoof.wordpress.com/2015/03/09/new-paper-about-how-sibling-competition-and-mortality-risks-affect-birth-intervals/">shape birth patterns</a> (<a href="http://onlinelibrary.wiley.com/doi/10.1111/jeb.12613/abstract" target="_blank" rel="noopener nofollow">published in the Journal of Evolutionary Biology</a>).</p>
-                <p>For the empirical bit, I worked with Saami reindeer herders in the county of Finnmark, Norway. I used <a href="http://en.wikipedia.org/wiki/Public_goods_game" target="_blank" rel="noopener nofollow">experimental economic games</a> and statistics to understand how Saami people worked together in herding groups. I've also looked at how kinship, reputation and reciprocity affect how Mosuo farmers work together in southwestern China.</p>
-                <p>You can academically socialise with me on <a href="https://www.researchgate.net/profile/Matthew_Thomas3/" target="_blank" rel="noopener nofollow">ResearchGate</a>, <a href="https://ucl.academia.edu/matthewgthomas" target="_blank" rel="noopener nofollow">Academia.edu</a> or <a href="https://scholar.google.co.uk/citations?user=3nB91QoAAAAJ&amp;hl=en" target="_blank" rel="noopener nofollow">Google Scholar</a>.</p>
+                <div className="content-body">
+                    <p>I did my PhD (titled 'The Dynamics of Human Cooperative Groups') in the <a href="https://www.ucl.ac.uk/social-historical-sciences/anthropology/research/human-evolutionary-ecology-group-heeg" target="_blank" rel="noopener nofollow">Human Evolutionary Ecology Group</a> at UCL in London. You can <a href="http://discovery.ucl.ac.uk/1473717/" rel="nofollow">read it here</a>. Afterwards, I worked as a postdoc for the <a href="http://niku.no/" rel="nofollow">Norwegian Institute for Cultural Heritage Research (NIKU)</a> and the <a href="http://www.nina.no/" rel="nofollow">Norwegian Institute for Nature Research (NINA)</a>, as part of the project, <a href="https://pastoralism-climate-change-policy.com/projects/reign/" target="_blank" rel="noopener nofollow">"ReiGN: Reindeer husbandry in a Globalizing North"</a>.</p>
+                    <p>Here's a haiku summary of my research:</p>
+                    <blockquote>
+                        <p>People sometimes help<br />friends, fam, neighbours, not witches.<br />But sometimes they don't.</p>
+                    </blockquote>
+                    <p>... and a summary written using only <a href="http://xkcd.com/1133/" target="_blank" rel="noopener nofollow">the ten hundred most common</a> English words:</p>
+                    <blockquote>
+                        <p>We think we know what people are like from how they act in rooms where brain-people in white jackets make them do things. But I want to check how people act in real life. I looked at how people work together in two places - one where they keep animals in the cold land at the top of the world and another place where they grow food around a body of water in a big big land. The people helped their friends, family and other close people. They liked good people and didn't help bad people.</p>
+                    </blockquote>
+                    <p>I used a mixture of theoretical models and actual, real-life fieldwork to understand patterns of cooperation.</p>
+                    <p>For the theoretical bit, I made mathematical models and computer simulations of evolutionary dynamics to look at how mortality in the environment and competition between siblings <a title="Paper about how sibling competition and mortality risks affect birth intervals" href="https://tangledwoof.wordpress.com/2015/03/09/new-paper-about-how-sibling-competition-and-mortality-risks-affect-birth-intervals/">shape birth patterns</a> (<a href="http://onlinelibrary.wiley.com/doi/10.1111/jeb.12613/abstract" target="_blank" rel="noopener nofollow">published in the Journal of Evolutionary Biology</a>).</p>
+                    <p>For the empirical bit, I worked with Saami reindeer herders in the county of Finnmark, Norway. I used <a href="http://en.wikipedia.org/wiki/Public_goods_game" target="_blank" rel="noopener nofollow">experimental economic games</a> and statistics to understand how Saami people worked together in herding groups. I've also looked at how kinship, reputation and reciprocity affect how Mosuo farmers work together in southwestern China.</p>
+                    <p>You can academically socialise with me on <a href="https://www.researchgate.net/profile/Matthew_Thomas3/" target="_blank" rel="noopener nofollow">ResearchGate</a>, <a href="https://ucl.academia.edu/matthewgthomas" target="_blank" rel="noopener nofollow">Academia.edu</a> or <a href="https://scholar.google.co.uk/citations?user=3nB91QoAAAAJ&amp;hl=en" target="_blank" rel="noopener nofollow">Google Scholar</a>.</p>
 
-                <h2>Publications</h2>
-                <ul className="publication-list">
-                    {publications.map((pub, index) => (
-                        <li key={index} className="publication-item">
-                            <span className="pub-year">[{pub.year}]</span>
-                            <div className="pub-details">
-                                <a href={pub.link} className="pub-title">{pub.title}</a>
-                                {pub.authors}
-                                <span className="pub-journal">{pub.journal}</span>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                    <h2>Publications</h2>
+                    <ul className="publication-list">
+                        {publications.map((pub, index) => (
+                            <li key={index} className="publication-item">
+                                <span className="pub-year">[{pub.year}]</span>
+                                <div className="pub-details">
+                                    <a href={pub.link} className="pub-title">{pub.title}</a>
+                                    {pub.authors}
+                                    <span className="pub-journal">{pub.journal}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );
