@@ -40,7 +40,7 @@ export default function Now() {
                     <h3>Reading</h3>
                     <ul>
                         <li>About to embark on <a href="https://www.goodreads.com/book/show/17899948-rebecca" target="_blank">Rebecca</a> by Daphne du Maurier.</li>
-                        <li>Just finished <a href="https://www.goodreads.com/book/show/228587642-the-rose-field" target="_blank">The Rose Field</a> by Philip Pullma.</li>
+                        <li>Just finished <a href="https://www.goodreads.com/book/show/228587642-the-rose-field" target="_blank">The Rose Field</a> by Philip Pullman.</li>
                         <li>Learning about chocolate supply chains with <a href="https://www.goodreads.com/book/show/38623593-cocoa" target="_blank">Cocoa</a> by Kristy Leissle.</li>
                     </ul>
 
