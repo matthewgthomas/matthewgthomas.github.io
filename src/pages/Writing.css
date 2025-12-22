@@ -1,0 +1,83 @@
+/* Writing Page Styles */
+
+.categories-filter {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--color-fg);
+    color: var(--color-fg);
+    font-family: var(--font-display);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-fg);
+    color: var(--color-bg);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    background: var(--color-ui-bg);
+    border: 2px solid var(--color-ui-border);
+    padding: 1rem;
+    position: relative;
+    transition: transform 0.2s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-highlight);
+    text-decoration: none;
+
+}
+
+.card-header {
+    margin-bottom: 1rem;
+}
+
+.category-tag {
+    background: var(--color-accent);
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-family: var(--font-display);
+}
+
+.article-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.article-card p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    color: var(--color-highlight);
+}
+
+.read-more:hover {
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,264 @@
+/* Scene Container - fills viewport */
+.home-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/steampunk_bg_desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+    .home-scene {
+        background-image: url('../assets/steampunk_bg_mobile.png');
+        background-position: center top;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .home-scene {
+        background-image: url('../assets/steampunk_bg_mobile.png');
+    }
+}
+
+/* Base Hotspot Styles */
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    border: 4px solid rgba(169, 109, 223, 0.5);
+    transition: all 0.2s;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 0 10px rgba(169, 109, 223, 0.3);
+    animation: hotspot-pulse 3s infinite;
+}
+
+@keyframes hotspot-pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(169, 109, 223, 0.5);
+        border-color: rgba(169, 109, 223, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(169, 109, 223, 0.9);
+        border-color: rgba(169, 109, 223, 0.8);
+        background: rgba(169, 109, 223, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(169, 109, 223, 0.5);
+        border-color: rgba(169, 109, 223, 0.2);
+    }
+}
+
+@keyframes hotspot-label-pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(169, 109, 223, 0.5);
+        border-color: rgba(169, 109, 223, 0.2);
+        background: rgba(169, 109, 223, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(169, 109, 223, 0.9);
+        border-color: rgba(169, 109, 223, 0.8);
+        background: var(--color-bg);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(169, 109, 223, 0.5);
+        border-color: rgba(169, 109, 223, 0.2);
+        background: rgba(169, 109, 223, 0.1);
+    }
+}
+
+.hotspot:hover {
+    /*border-color: var(--color-hotspot);*/
+    border: 6px solid rgb(169, 109, 223);
+    background: rgba(169, 109, 223, 0.3);
+    animation: none;
+    box-shadow: 0 0 20px rgb(169, 109, 223);
+}
+
+.hotspot-label {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-bg);
+    color: var(--color-hotspot);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    display: none;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.hotspot:hover .hotspot-label {
+    display: block;
+}
+
+/* Show hotspot labels on mobile/table */
+@media (max-width: 1024px) {
+    .hotspot-label {
+        display: block;
+        border: 2px solid rgba(169, 109, 223, 0.5);
+        background: rgba(169, 109, 223, 0.1);
+        animation: hotspot-label-pulse 3s infinite;
+        box-shadow: 0 0 10px rgba(169, 109, 223, 0.3);
+    }
+
+    .hotspot:hover .hotspot-label {
+        animation: none;
+        background: var(--color-bg);
+    }
+}
+
+/* --- HOTSPOT POSITIONS --- */
+
+/* DESKTOP (Default: Horizontal) */
+/* Left: Desk (Writing) */
+.writing-spot {
+    bottom: 2%;
+    left: 5%;
+    width: 28%;
+    height: 40%;
+}
+
+/* Center: Bookshelf (Research) */
+.research-spot {
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 40%;
+}
+
+/* Right: Workbench (Projects) */
+.projects-spot {
+    bottom: 4%;
+    right: 3%;
+    width: 30%;
+    height: 40%;
+}
+
+/* TABLET & MOBILE (Stacked Layout) */
+@media (max-width: 1024px) {
+
+    /* Top: Bookshelf (Research) */
+    .research-spot {
+        top: 17%;
+        left: 10%;
+        width: 80%;
+        height: 23%;
+    }
+
+    /* Middle: Desk (Writing) */
+    .writing-spot {
+        top: 45%;
+        left: 10%;
+        width: 80%;
+        height: 23%;
+        bottom: auto;
+        /* Reset desktop constraints */
+    }
+
+    /* Bottom: Workbench (Projects) */
+    .projects-spot {
+        bottom: 5%;
+        /* Anchor to bottom */
+        left: 10%;
+        right: auto;
+        width: 80%;
+        height: 21%;
+        top: auto;
+    }
+}
+
+/* Title Top Left */
+.scene-title {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border: 2px solid var(--color-highlight);
+}
+
+.scene-title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--color-highlight);
+}
+
+@media (max-width: 768px) {
+    .scene-title {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .scene-title h1 {
+        font-size: 1rem;
+    }
+}
+
+/* Dialogue Overlay Fixed at Bottom */
+.scene-dialogue {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.social-links-minimal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 60;
+}
+
+.social-links-minimal a {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    color: var(--color-fg);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+}
+
+/* Social links position for Tablet/Mobile */
+@media (max-width: 1024px) {
+    .social-links-minimal {
+        right: auto;
+        left: 30px;
+        top: 80px;
+        /* Below title (approx height) */
+    }
+}
+
+@media (max-width: 768px) {
+    .social-links-minimal {
+        left: 50%;
+        transform: translateX(-50%);
+        /*top: 84px;*/
+        top: 10%;
+        /*bottom: 0;
+        top: auto;*/
+        /* More space for wrapped text on mobile */
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+}

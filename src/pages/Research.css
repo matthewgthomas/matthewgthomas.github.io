@@ -1,0 +1,34 @@
+/* Publication List Styles */
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: baseline;
+}
+
+.pub-year {
+    font-family: var(--font-display);
+    color: var(--color-accent);
+}
+
+.pub-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.pub-title {
+    font-size: 1.2rem;
+    color: var(--color-highlight);
+    margin-bottom: 0.2rem;
+}
+
+.pub-journal {
+    font-style: italic;
+    color: #aaa;
+}

@@ -1,0 +1,18 @@
+.cat-sprite {
+    display: inline-block;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    /* Start at frame 0 of the selected row */
+    background-position: 0 var(--offset-y);
+    animation: sprite-animation var(--duration) steps(var(--steps)) infinite;
+}
+
+@keyframes sprite-animation {
+    from {
+        background-position: 0 var(--offset-y);
+    }
+
+    to {
+        background-position: var(--sprite-width) var(--offset-y);
+    }
+}
